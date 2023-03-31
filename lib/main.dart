@@ -11,15 +11,15 @@ void main()
   runApp(
       MultiProvider(
         providers: [
-          ChangeNotifierProvider(create: (context) => BottomProvider(),)
+          ChangeNotifierProvider(create: (context) => WebProvider(),)
         ],
         child: Sizer(
           builder: (context, orientation, deviceType) {
             return MaterialApp(
               debugShowCheckedModeBanner: false,
               routes: {
-                '/' : (context) => AppsPage(),
-                'Appshow' : (context) => AppShowPage(),
+                '/' : (context) => HomeScreen(),
+                'WebScreen' : (context) => WebScreen(),
               },
             );
           },
